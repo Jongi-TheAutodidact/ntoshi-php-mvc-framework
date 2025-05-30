@@ -23,7 +23,7 @@ This lightweight, easy-to-use framework offers a fast and efficient way to devel
 2. **Using Composer**: Install project using Composer. <br>
    STEP ONE
     ```bash
-    composer create-project jongi/ntoshi [your-project-name]
+    composer create-project --stability=beta jongi/ntoshi [your-project-name]
     ```
    STEP TWO
    - **Database Setup**: Create a new database.
@@ -45,6 +45,13 @@ This lightweight, easy-to-use framework offers a fast and efficient way to devel
    - **Migrations**: Configure and execute migrations to set up the database tables.
     ```bash
     php jongi migrate:all
+    ```
+   DEFAULT ADMIN USER
+   - **Login Credentials**: 
+    ```bash
+    Username: MbuMpofu
+    Email: mbuzeli.mpofu@ntoshi.co.za
+    Password: 12345678
     ```
 
 Now your application is ready to go! Benefit from essential features such as user authentication, validation, and session management right out of the box.
