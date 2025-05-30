@@ -1,0 +1,21 @@
+{
+    "name": "jongi/ntoshi",
+    "description": "🚀 Ntoshi Framework simplifies PHP app development with intuitive design patterns and a customizable foundation. Ideal for small to medium-sized business applications, with CMS extension.",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "version": "1.0.0-beta",
+    "authors": [
+        {
+            "name": "Jongi Mbodla",
+            "email": "jongim@jongimbodla.africa"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "dompdf/dompdf": "^2.0"
+    },
+    
+    "minimum-stability": "beta",
+    "prefer-stable": true
+}
+
