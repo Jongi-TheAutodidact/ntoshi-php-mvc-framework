@@ -4,7 +4,7 @@
 <div class="frontend-card auth-card">
     <div class="card-body">
         <div class="text-center">
-            <img src="<?= $company_details[0]->image ?>" width="40%" alt="<?= LOGO_IMG_ALT ?>">
+            <img src="<?= get_image($company_details[0]->image, 'logo') ?>" width="40%" alt="<?= LOGO_IMG_ALT ?>">
         </div>
         <hr>
         <h3 class="card-title text-center mb-4">Create Account</h3>

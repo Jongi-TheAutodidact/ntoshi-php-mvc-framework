@@ -96,6 +96,8 @@ function get_image($file = '', $type = 'post')
 
 	if ($type == 'user') {
 		return ROOT . "/assets/img/user.png";
+	} else if($type == 'logo') {
+		return ROOT . "/assets/img/ntoshi-logo.png";
 	} else {
 		return ROOT . "/assets/img/img-ph.png";
 	}
