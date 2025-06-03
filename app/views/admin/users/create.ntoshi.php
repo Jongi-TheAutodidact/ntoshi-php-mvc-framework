@@ -73,9 +73,14 @@
                                             <?php $selUserRole = old_value('user_role') ?>
                                             <select name="<?= esc('user_role') ?>" id="user_role" class="form-control mb-1">
                                                 <option value="Select Role">--Select User Role--</option>
-                                                <option value="Admin" <?= $selUserRole == 'Admin' ? 'selected' : '' ?>>Admin</option>
-                                                <option value="User" <?= $selUserRole == 'User' ? 'selected' : '' ?>>User</option>
-                                                <option value="Customer" <?= $selUserRole == 'Customer' ? 'selected' : '' ?>>Customer</option>
+                                                <?php if (!empty(USER_ROLES)): foreach (USER_ROLES as $role): ?>
+                                                        <option value="<?= $role ?>" <?= $selUserRole == $role ? 'selected' : '' ?>><?= $role ?></option>
+                                                    <?php endforeach;
+                                                else: ?>
+                                                    <option value="Admin" <?= $selUserRole == 'Admin' ? 'selected' : '' ?>>Admin</option>
+                                                    <option value="User" <?= $selUserRole == 'User' ? 'selected' : '' ?>>User</option>
+                                                    <option value="Customer" <?= $selUserRole == 'Customer' ? 'selected' : '' ?>>Customer</option>
+                                                <?php endif ?>
                                             </select>
                                     <?php
                                             break;

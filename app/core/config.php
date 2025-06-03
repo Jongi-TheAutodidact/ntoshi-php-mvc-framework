@@ -6,7 +6,7 @@ defined('ROOTPATH') OR exit('Access Denied!');
 if(empty($_SERVER['SERVER_NAME']) && php_sapi_name() == 'cli' || (!empty($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'localhost'))
 {
 	/** database config **/
-	define('DBNAME', '');
+	define('DBNAME', 'ntoshi_frame_db');
 	define('DBHOST', 'localhost'); 
 	define('DBUSER', 'root');
 	define('DBPASS', '');
@@ -39,6 +39,13 @@ define('POLICY_ADOPT_DATE','2024-01-01');
 define('EST_YEAR','2024');
 define('DEF_CURR','R');
 define('JONGI_CLI_VERS','1.0.0');
+
+/* USER ROLES ARRAY */
+define('USER_ROLES', array_map('ucwords', array_map('strtolower', [
+    'Admin',
+    'User',
+    'Customer'
+])));
 
 /* SMTP CONFIG */
 define('MAIL_HOST','');
