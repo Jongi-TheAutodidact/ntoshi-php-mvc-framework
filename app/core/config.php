@@ -12,7 +12,7 @@ if(empty($_SERVER['SERVER_NAME']) && php_sapi_name() == 'cli' || (!empty($_SERVE
 	define('DBPASS', '');
 	define('DBDRIVER', 'sql');
 	
-	define('ROOT', 'http://localhost/ntoshi-framework/public');
+	define('ROOT', 'http://localhost:5001');
 
 }else
 {
