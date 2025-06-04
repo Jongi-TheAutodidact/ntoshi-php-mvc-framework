@@ -40,8 +40,8 @@ This lightweight, easy-to-use framework offers a fast and efficient way to devel
    - **Configure the URL & User Roles**: Update the URL and use the name of your project instead of `ntoshi-framework`, inside `app/core/config.php`, and configure User Roles. See below: 
     ```bash
     define('ROOT', 'http://localhost/ntoshi-framework/public');
-    ```
-   
+    ```    
+
     ```bash
     define('USER_ROLES', array_map('ucwords', array_map('strtolower', [
         'Admin',
