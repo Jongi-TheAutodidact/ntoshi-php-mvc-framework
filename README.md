@@ -50,6 +50,11 @@ This lightweight, easy-to-use framework offers a fast and efficient way to devel
     ```bash
     php jongi migrate:all
     ```
+    STEP SIX
+   - **Spin The Server**: Start the server and open your application on your default browser, automatically using only the command below.
+    ```bash
+    php jongi spinit
+    ```
    DEFAULT ADMIN USER
    - **Login Credentials**: 
     ```bash
