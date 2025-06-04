@@ -2,11 +2,11 @@
     "name": "jongi/ntoshi",
     "description": "🚀 Ntoshi Framework simplifies PHP app development with intuitive design patterns and a customizable foundation. Ideal for small to medium-sized business applications, with CMS extension.",
     "keywords": [
-        "PHP","MVC","Framework","Development","Ntoshi Web Framework","Jongi Brands","Ntoshi PHP framework","lightweight PHP framework","Laravel alternative","CodeIgniter alternative","Custom PHP framework","Build web apps fast","rapid PHP development","PHP CLI tool","modular PHP framework","self-taught developer PHP","PHP for startups","PHP framework with CLI","PHP artisan alternative","PHP development tools","dev productivity tools","make apps faster PHP","PHP for businesses","PHP CRM","clean PHP framework","small business dev tools", "PHP ERP"
+        "PHP","MVC","Framework","Development","Ntoshi Web Framework","Jongi Brands","Ntoshi PHP framework","lightweight PHP framework","Laravel alternative","CodeIgniter alternative","Custom PHP framework","Build web apps fast","rapid PHP development","PHP CLI tool","modular PHP framework","self-taught developer PHP","PHP for startups","PHP framework with CLI","PHP artisan alternative","PHP development tools","dev productivity tools","make apps faster PHP","PHP for businesses","PHP CRM","clean PHP framework","small business dev tools"
     ],
     "type": "project",
     "license": "GPL-3.0-or-later",
-    "version": "1.0.1-beta",
+    "version": "1.0.1.0-beta",
     "authors": [
         {
             "name": "Jongi Mbodla",
