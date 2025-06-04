@@ -43,7 +43,11 @@ This lightweight, easy-to-use framework offers a fast and efficient way to devel
     ```
    
     ```bash
-    define('ROOT', 'http://localhost/ntoshi-framework/public');
+    define('USER_ROLES', array_map('ucwords', array_map('strtolower', [
+	    'Admin',
+	    'User',
+	    'Customer'
+	])));
     ```
     STEP FIVE
    - **Migrations**: Configure and execute migrations to set up the database tables.
