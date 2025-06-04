@@ -14,7 +14,7 @@
       </a>
       <ul class="collapse list-unstyled" id="pageSubmenu">
         <li><a href="<?= ROOT . '/admin/posts' ?>" class="nav-link px-4"><small><i class="bi bi-list-ul me-2"></i>All Posts</small></a></li>
-        <li><a href="<?= ROOT . '/admin/post/create' ?>" class="nav-link px-4"><small><i class="bi bi-plus-circle me-2"></i>Add New</small></a></li>
+        <li><a href="<?= ROOT . '/admin/post/create/null' ?>" class="nav-link px-4"><small><i class="bi bi-plus-circle me-2"></i>Add New</small></a></li>
         <li><a href="<?= ROOT . '/admin/categories' ?>" class="nav-link px-4"><small><i class="bi bi-tags me-2"></i>Categories</small></a></li>
       </ul>
     </li>
