@@ -270,35 +270,95 @@ class Jongi
 		}
 	}
 
+	// Spin the PHP Server
+	public function spinit($argv)
+	{
+		$port = $argv[2] ?? '5001'; // Default port 5001 if not specified
+
+		// Validate port number
+		if (!is_numeric($port)) {
+			die("\n\rPort must be a number!\n\r");
+		}
+		if ($port < 1024 || $port > 65535) {
+			die("\n\rPort must be between 1024 and 65535\n\r");
+		}
+
+		$publicDir = 'public';
+		if (!is_dir($publicDir)) {
+			die("\n\rPublic directory not found!\n\r");
+		}
+
+		$url = "http://localhost:$port";
+
+		echo "\n\rStarting PHP development server on port $port...\n\r";
+		echo "Document root is $publicDir\n\r";
+		echo "Server URL: $url\n\r";
+		echo "Press Ctrl-C to quit\n\r\n\r";
+
+		// Open browser automatically
+		$this->openBrowser($url);
+
+		// Start the server
+		passthru("php -S localhost:$port -t $publicDir");
+	}
+
+	private function openBrowser($url)
+	{
+		// Determine the operating system
+		$os = strtoupper(substr(PHP_OS, 0, 3));
+
+		try {
+			switch ($os) {
+				case 'WIN': // Windows
+					exec("start $url");
+					break;
+				case 'DAR': // MacOS
+					exec("open $url");
+					break;
+				case 'LIN': // Linux
+					exec("xdg-open $url");
+					break;
+				default:
+					echo "\n\rCould not automatically open browser on this OS. Please open manually: $url\n\r";
+					break;
+			}
+		} catch (Exception $e) {
+			echo "\n\rFailed to open browser automatically. Please open manually: $url\n\r";
+		}
+	}
+
 
 	// List 'Help' Menu in the Command line 
 	public function help()
 	{
 		echo "
 
-		Jongi v$this->version Command Line Tool.
+    Jongi v$this->version Command Line Tool.
 
-		**DB-RELATED FUNCTIONS**
-			db:create		- Creates a new Database Schema.
-			db:seed			- Runs the specified seeder to populate known data into the Database.
-			db:table		- Retrieves information contained within the selected table.
-			db:drop			- Drops/Deletes a Database.
-			migrate			- Locates and runs a migration from the specified folder.
-			migrate:all			- Locates and runs migrations from the specified folder.
-			migrate:rollback	- Runs the 'omega' method for a migration file(ie deletes the table).
-			migrate:refresh		- Rolls Back and subsequently refreshes to the current state of the Database.
+    **SERVER COMMANDS**
+        serve [port]      - Starts PHP development server (default port: 5001)
 
-		**GENERATOR FUNCTIONS**
-			*DB related*
+    **DB-RELATED FUNCTIONS**
+        db:create        - Creates a new Database Schema.
+        db:seed         - Runs the specified seeder to populate known data into the Database.
+        db:table        - Retrieves information contained within the selected table.
+        db:drop         - Drops/Deletes a Database.
+        migrate         - Locates and runs a migration from the specified folder.
+        migrate:all         - Locates and runs migrations from the specified folder.
+        migrate:rollback    - Runs the 'omega' method for a migration file(ie deletes the table).
+        migrate:refresh     - Rolls Back and subsequently refreshes to the current state of the Database.
 
-			make:migration		- Generates a new migration file.
-			make:seeder		- Generates a new seeder file.
-			list:migrations		- Makes a list of all available migration files.
+    **GENERATOR FUNCTIONS**
+        *DB related*
 
-			*MVC related*
+        make:migration      - Generates a new migration file.
+        make:seeder     - Generates a new seeder file.
+        list:migrations     - Makes a list of all available migration files.
 
-			make:model		- Generates a new Model file.
-			make:controller		- Generates a new Controller file.
-		";
+        *MVC related*
+
+        make:model      - Generates a new Model file.
+        make:controller     - Generates a new Controller file.
+    ";
 	}
 }
