@@ -30,13 +30,19 @@ This lightweight, easy-to-use framework offers a fast and efficient way to devel
     ```bash
     php jongi db:create [dbname]
     ```
-    STEP THREE
-    - **Configure the database name**: Update the database name in `app/core/config.php` to match the recently created database name.
+    STEP THREE (inside `app/core/config.php`)
+    - **Configure The Database Name**: Update the database name to match the recently created database (line 9).
     ```bash
     /** database config **/
 	define('DBNAME', 'ntoshi_framework_db');
     ```
-    STEP FOUR
+   
+    - **Configure Root Path**: Update the "ROOT" constant value such that it matches the name of the directory you have (line 15). Replace `ntoshi-framework`
+    ```bash
+    /** rootpath config **/
+	define('ROOT', 'http://localhost/ntoshi-framework/public');
+    ```
+
    - **Configure User Roles**: Configure User Roles inside `app/core/config.php`at about line 45. See below:    
     ```bash
     define('USER_ROLES', array_map('ucwords', array_map('strtolower', [
