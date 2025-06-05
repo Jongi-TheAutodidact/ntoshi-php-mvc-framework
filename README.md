@@ -37,7 +37,7 @@ This lightweight, easy-to-use framework offers a fast and efficient way to devel
 	define('DBNAME', 'ntoshi_framework_db');
     ```
    
-    - **Configure Root Path**: Update the "ROOT" constant value such that it matches the name of the directory you have (line 15). Replace `ntoshi-framework`
+    - **Configure Root Path**: Update the "ROOT" constant value such that it matches the name of the directory you have set your project in. Replace `ntoshi-framework` (line 15)
     ```bash
     /** rootpath config **/
 	define('ROOT', 'http://localhost/ntoshi-framework/public');
@@ -51,12 +51,12 @@ This lightweight, easy-to-use framework offers a fast and efficient way to devel
 	    'Customer'
 	])));
     ```
-    STEP FIVE
+    STEP FOUR
    - **Migrations**: Configure and execute migrations to set up the database tables.
     ```bash
     php jongi migrate:all
     ```
-    STEP SIX
+    STEP FIVE
    - **Spin The Server**: Start the server and open your application on your default browser, automatically using only the command below.
     ```bash
     php jongi spinit

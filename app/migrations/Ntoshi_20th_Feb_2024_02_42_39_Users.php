@@ -58,7 +58,7 @@ class Users extends Migration
 		$this->addData('username','MbuMpofu');
 		$this->addData('email','mbuzeli.mpofu@ntoshi.co.za');
 		$this->addData('password',password_hash('12345678', PASSWORD_DEFAULT));
-		$this->addData('user_role','Lead Developer');
+		$this->addData('user_role','Admin');
 		$this->addData('phone','+27739644198');
 
 		$this->insertData('users');
