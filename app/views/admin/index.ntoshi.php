@@ -45,55 +45,6 @@
             </div>
         </div>
     </div>
-
-    <div class="row my-5">
-        <h3 class="fs-4 mb-3 page-title">Recent Activity</h3>
-        <div class="col">
-            <div class="table-responsive bg-body-tertiary p-3 rounded shadow-sm animated-card">
-                <table class="table table-hover align-middle mb-0">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">User</th>
-                            <th scope="col">Action</th>
-                            <th scope="col">Item</th>
-                            <th scope="col">Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Alice</td>
-                            <td><span class="badge bg-success">Created</span></td>
-                            <td>New Blog Post "Intro to AI"</td>
-                            <td>2024-07-28</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Bob</td>
-                            <td><span class="badge bg-info">Commented</span></td>
-                            <td>On post "WebSim Features"</td>
-                            <td>2024-07-28</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Charlie</td>
-                            <td><span class="badge bg-warning text-dark">Edited</span></td>
-                            <td>User Profile</td>
-                            <td>2024-07-27</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>David</td>
-                            <td><span class="badge bg-danger">Deleted</span></td>
-                            <td>Comment ID #123</td>
-                            <td>2024-07-27</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
    
     <div class="row my-5">
         <h3 class="fs-4 mb-3 page-title">Contact Form Messages</h3>
