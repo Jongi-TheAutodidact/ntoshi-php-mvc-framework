@@ -6,13 +6,13 @@ defined('ROOTPATH') OR exit('Access Denied!');
 if(empty($_SERVER['SERVER_NAME']) && php_sapi_name() == 'cli' || (!empty($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'localhost'))
 {
 	/** database config **/
-	define('DBNAME', '');
+	define('DBNAME', 'ntoshi_frame_db');
 	define('DBHOST', 'localhost'); 
 	define('DBUSER', 'root');
 	define('DBPASS', '');
 	define('DBDRIVER', 'sql');
 	
-	define('ROOT', 'http://localhost:5001');
+	define('ROOT', 'http://localhost/ntoshi-framework/public');
 
 }else
 {
