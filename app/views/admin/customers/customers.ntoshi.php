@@ -8,7 +8,7 @@
           <div class="col">
               <div class="d-flex justify-content-between align-items-center mb-3">
                   <h3 class="fs-4 page-title">Customer List</h3>
-                  <a href="<?= ROOT . '/admin/customers/new' ?>" class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>Add New Customer</a>
+                  <a href="<?= ROOT . '/admin/customers/new/null' ?>" class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>Add New Customer</a>
               </div>
               <?= Util::displayFlash('cust_register_success', 'success') ?>
               <?= Util::displayFlash('cust_update_success', 'success') ?>
