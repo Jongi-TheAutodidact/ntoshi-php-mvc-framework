@@ -1,7 +1,7 @@
 <?php $this->view('inc/front-header', $data) ?>
 <header class="content-page-header text-center text-white">
     <div class="container">
-        <h1 class="display-4 fw-bold">About <?=  $comp_detail->name ?></h1>
+        <h1 class="display-4 fw-bold">About <?= $comp_detail->name ?></h1>
         <p class="lead">Innovating the way content is managed and delivered.</p>
     </div>
 </header>
@@ -52,12 +52,29 @@
             <h2 class="card-title text-center mb-4">Meet the Team</h2>
             <div class="row text-center">
                 <?php if (!empty($users)): foreach ($users as $user): ?>
-                        <div class="col-md-4 mb-4 p-2" style="border: 1px solid #ccc;border-radius:15px">
-                            <img src="<?= get_image($user->image) ?>" alt="<?= $user->firstname . ' Profile Image' ?>" class="rounded-circle mb-2" style="width:120px; height:120px; object-fit:cover; border: 3px solid var(--accent-color);">
-                            <h5><?= $user->firstname . ' ' . $user->surname ?></h5>
-                            <p class="text-muted"><?= $user->user_role ?></p>
-                        </div>
-                <?php endforeach;
+                        <?php switch ($user->user_role) {
+                            case 'Manager':
+                            case 'Web Developer':
+                            case 'Lead Developer':
+                            case 'HR Consultant': ?>
+                                <div class="col-md-4 mb-4 p-2" style="border: 1px solid #ccc;border-radius:15px">
+                                    <img src="<?= get_image($user->image, 'user') ?>" alt="<?= $user->firstname . ' Profile Image' ?>" class="rounded-circle mb-2" style="width:120px; height:120px; object-fit:cover; border: 3px solid var(--accent-color);">
+                                    <h5><?= $user->firstname . ' ' . $user->surname ?></h5>
+                                    <p class="text-muted">
+                                        <span class="text-light bg-danger rounded-5 px-2 py-1" style="font-size: 12px;"><?= $user->user_role ?></span> <br> 
+                                        <span style="font-size: 12px;"><?= $user->phone ?></span> <br>
+                                        <span style="font-size: 10px;" class="text-muted"><?= $user->email ?></span>
+                                    </p>
+                                </div>
+                        <?php break;
+
+                            default:
+                                # code...
+                                break;
+                        } ?>
+
+                <?php
+                    endforeach;
                 endif; ?>
             </div>
         </div>

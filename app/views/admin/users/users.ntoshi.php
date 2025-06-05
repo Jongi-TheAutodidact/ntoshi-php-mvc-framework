@@ -49,24 +49,25 @@
                                                             switch ($row->user_role) {
                                                                 case 'Admin': ?>
                                                                     <span class="badge bg-success">
-                                                                <?php
+                                                                    <?php
                                                                     break;
                                                                 case 'User': ?>
-                                                                    <span class="badge bg-warning">
-                                                                <?php
-                                                                    break;
-                                                                case 'Customer': ?>
-                                                                    <span class="badge bg-secondary">
-                                                                <?php
-                                                                    break;
+                                                                        <span class="badge bg-warning">
+                                                                        <?php
+                                                                        break;
+                                                                    case 'Customer': ?>
+                                                                            <span class="badge bg-danger">
+                                                                            <?php
+                                                                            break;
 
-                                                                default:
-                                                                    # code...
-                                                                    break;
-                                                            }
-                                                                ?>
-                                                                <?= $row->user_role ?>
-                                                                    </span>
+                                                                        default: ?>
+                                                                                <span class="badge bg-secondary">
+                                                                            <?php
+                                                                            break;
+                                                                    }
+                                                                            ?>
+                                                                            <?= $row->user_role ?>
+                                                                                </span>
                                                         </td>
                                                         <td class="text-end">
                                                             <a href="<?= ROOT ?>/admin/users/profile/<?= $row->id ?>" class="btn btn-sm btn-outline-info me-1" title="View User"><i class="bi bi-eye-fill"></i></a>
